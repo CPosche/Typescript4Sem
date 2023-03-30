@@ -1,0 +1,52 @@
+{
+  "person": [
+    {
+      "id": 1,
+      "name": "Bennnnie",
+      "age": 56,
+      "city": "derovre"
+    },
+    {
+      "id": 2,
+      "name": "Cecilie",
+      "age": 30,
+      "city": "Hundige"
+    },
+    {
+      "id": 3,
+      "name": "Dennis",
+      "age": 10,
+      "city": "frederiksberg"
+    },
+    {
+      "id": 4,
+      "name": "Erik",
+      "age": 50,
+      "city": "Frederikssund"
+    },
+    {
+      "id": 5,
+      "name": "Gustav",
+      "age": 70,
+      "city": "Frederikssund"
+    },
+    {
+      "id": 6,
+      "name": "Hans",
+      "age": 80,
+      "city": "Albertslund"
+    },
+    {
+      "id": 7,
+      "name": "Ib",
+      "age": 90,
+      "city": "Frederikssund"
+    },
+    {
+      "id": 8,
+      "name": "Jens",
+      "age": 100,
+      "city": "Frederikssund"
+    }
+  ]
+}

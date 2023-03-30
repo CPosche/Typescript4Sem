@@ -1,0 +1,11 @@
+[2023-03-10T12:31:14.814] [INFO] default - person: [object Object] looked up at Fri Mar 10 2023 12:31:14 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:31:15.231] [INFO] default - person: [object Object] looked up at Fri Mar 10 2023 12:31:15 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:32:41.248] [INFO] default - person: Cecilie looked up at Fri Mar 10 2023 12:32:41 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:47:10.035] [INFO] default - Request received: GET /people/31 at Fri Mar 10 2023 12:47:10 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:47:10.041] [INFO] default - person: steve looked up at Fri Mar 10 2023 12:47:10 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:49:44.428] [INFO] default - Request received: PUT /people/100 at Fri Mar 10 2023 12:49:44 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:50:58.065] [INFO] default - Request received: PUT /people/100 at Fri Mar 10 2023 12:50:58 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:53:28.667] [INFO] default - Request received: GET /people/100 at Fri Mar 10 2023 12:53:28 GMT+0100 (Centraleuropæisk normaltid)
+[2023-03-10T12:54:43.146] [INFO] default - Request received: GET /people/31 at Fri Mar 10 2023 12:54:43 GMT+0100 (Centraleuropæisk normaltid) with code 200
+[2023-03-10T12:54:47.945] [INFO] default - Request received: GET /people/100 at Fri Mar 10 2023 12:54:47 GMT+0100 (Centraleuropæisk normaltid) with code 200
+[2023-03-10T12:56:25.183] [INFO] default - Request received: GET /people/10000 at Fri Mar 10 2023 12:56:25 GMT+0100 (Centraleuropæisk normaltid) with code 200
