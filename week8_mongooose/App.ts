@@ -7,8 +7,10 @@ import MechanicRouter from "./routes/MechanicRoute";
 import PersonRouter from "./routes/PersonRoute";
 import ReviewRouter from "./routes/ReviewRoute";
 import logger from "./utils/logger";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
   console.log("Development mode...");
@@ -27,7 +29,7 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/cars", CarRouter);
 app.use("/api/v1/mechanics", MechanicRouter);
-app.use("/api/v1/persons", PersonRouter);
+app.use("/api/v1/people", PersonRouter);
 app.use("/api/v1/reviews", ReviewRouter);
 
 export default app;
