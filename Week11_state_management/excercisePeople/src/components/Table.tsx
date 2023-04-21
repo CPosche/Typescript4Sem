@@ -1,5 +1,4 @@
 import React from "react";
-import { Person } from "../utils/types";
 
 type Props = {
   headers: JSX.Element;
