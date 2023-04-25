@@ -41,3 +41,20 @@ export type Reviews = {
   rating: number;
   createdAt?: Date;
 };
+
+export type PersonInput = {
+  name: string;
+  age: number;
+  address?: string;
+};
+
+export type AddressInput = {
+  street: string;
+  city: string;
+};
+
+export type Args = {
+  PersonInput: PersonInput;
+  AddressInput: AddressInput;
+};
+

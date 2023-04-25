@@ -4,7 +4,7 @@ import express = require("express");
 import morgan = require("morgan");
 import CarRouter from "./routes/CarRoute";
 import MechanicRouter from "./routes/MechanicRoute";
-import PersonRouter from "./routes/PersonRoute";
+// import PersonRouter from "./routes/PersonRoute";
 import ReviewRouter from "./routes/ReviewRoute";
 import logger from "./utils/logger";
 
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/v1/person", PersonRouter);
+// app.use("/api/v1/person", PersonRouter);
 app.use("/api/v1/mechanic", MechanicRouter);
 app.use("/api/v1/cars", CarRouter);
 app.use("/api/v1/reviews", ReviewRouter);

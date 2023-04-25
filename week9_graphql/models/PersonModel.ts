@@ -14,12 +14,9 @@ const PersonSchema = new mongoose.Schema({
     min: [1, "Age cannot be less than 1"],
     max: [100, "Age cannot be more than 100"],
   },
-  city: {
-    type: String,
-    trim: true,
-    required: [true, "Please provide a city"],
-    maxLength: [20, "City cannot be more than 20 characters"],
-    minLength: [2, "City cannot be less than 2 characters"],
+  address: {
+    type: mongoose.Types.ObjectId,
+    ref: "Address",
   },
   createdAt: {
     type: Date,
