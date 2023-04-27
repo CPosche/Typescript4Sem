@@ -1,4 +1,4 @@
-import { Args } from "../../../utils/types";
+import { Args } from "../../utils/types";
 import PersonModel from "../../models/PersonModel";
 import AddressModel from "../../models/AddressModel";
 

@@ -1,4 +1,4 @@
-import { PersonInput, AddressInput, Args } from "../../../utils/types";
+import { PersonInput, AddressInput, Args } from "../../utils/types";
 import PersonModel from "../../models/PersonModel";
 import AddressModel from "../../models/AddressModel";
 
