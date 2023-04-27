@@ -36,18 +36,19 @@ personSchema.pre("find", function () {
   this.populate("address");
 });
 
-// personSchema.pre("save", function () {
-//   if (this.isNew || this.isModified("address")) {
-//     // If this is a new person or the address field has been modified
-//     // then update the corresponding address' persons field
-//     const addressToUpdate = this.address;
-//     if (addressToUpdate) {
-//       AddressModel.findByIdAndUpdate(addressToUpdate, {
-//         $addToSet: { persons: this._id },
-//       });
-//     }
-//   }
-// });
+personSchema.pre("save", async function () {
+  if (this.isNew || this.isModified("address")) {
+    // If this is a new person or the address field has been modified
+    // then update the corresponding address' persons field
+    const addressToUpdate = this.address;
+    if (addressToUpdate) {
+      await AddressModel.findByIdAndUpdate(addressToUpdate, {
+        $addToSet: { persons: this._id },
+      });
+    }
+    this.populate("address");
+  }
+});
 
 const PersonModel = mongoose.model("Person", personSchema);
 
