@@ -37,18 +37,9 @@ personSchema.pre("find", function () {
 });
 
 personSchema.pre("save", async function () {
-  if (this.isNew || this.isModified("address")) {
-    // If this is a new person or the address field has been modified
-    // then update the corresponding address' persons field
-    const addressToUpdate = this.address;
-    if (addressToUpdate) {
-      await AddressModel.findByIdAndUpdate(addressToUpdate, {
-        $addToSet: { persons: this._id },
-      });
-    }
-    this.populate("address");
-  }
+  await this.populate("address");
 });
+
 
 const PersonModel = mongoose.model("Person", personSchema);
 
