@@ -195,6 +195,8 @@ node_modules
 
 /*/node_modules
 
+app.log
+
 # Sonarlint plugin
 # https://plugins.jetbrains.com/plugin/7973-sonarlint
 
