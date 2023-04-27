@@ -51,7 +51,6 @@ personSchema.pre("save", async function (next) {
   } else {
     next();
   }
-
   await this.populate("address");
 });
 

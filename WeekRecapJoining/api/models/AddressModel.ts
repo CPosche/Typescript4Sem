@@ -1,44 +1,41 @@
 import mongoose from "mongoose";
 import PersonModel from "./PersonModel";
 
-const addressSchema = new mongoose.Schema(
-  {
-    street: {
-      type: String,
-      required: true,
-    },
-    number: {
-      type: Number,
-      required: true,
-    },
-    city: {
-      type: String,
-      required: true,
-    },
-    postalCode: {
-      type: Number,
-      required: true,
-    },
-    persons: {
-      type: [mongoose.Types.ObjectId],
-      ref: "Person",
-    },
-    createdAt: {
-      type: Date,
-      default: new Date(),
-      select: false,
-    },
-    updatedAt: {
-      type: Date,
-      default: new Date(),
-      select: false,
-    },
+const addressSchema = new mongoose.Schema({
+  street: {
+    type: String,
+    required: true,
   },
-  { toJSON: { virtuals: true }, toObject: { virtuals: true } }
-);
+  number: {
+    type: Number,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  postalCode: {
+    type: Number,
+    required: true,
+  },
+  persons: {
+    type: [mongoose.Types.ObjectId],
+    ref: "Person",
+  },
+  createdAt: {
+    type: Date,
+    default: new Date(),
+    select: false,
+  },
+  updatedAt: {
+    type: Date,
+    default: new Date(),
+    select: false,
+  },
+});
 
-addressSchema.pre("find", function () {
-  this.populate("persons");
+addressSchema.pre("find", async function () {
+  await this.populate("persons");
 });
 
 addressSchema.pre("save", async function (next) {
