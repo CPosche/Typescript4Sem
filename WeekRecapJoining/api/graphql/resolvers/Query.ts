@@ -12,11 +12,11 @@ export default {
     return person;
   },
   addresses: async () => {
-    const addresses = await AddressModel.find();
+    const addresses = await AddressModel.find().populate("persons");
     return addresses;
   },
   address: async (parent: any, args: Args) => {
-    const address = await AddressModel.findById(args.id);
+    const address = await AddressModel.findById(args.id).populate("persons");
     return address;
   },
 };

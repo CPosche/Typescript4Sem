@@ -46,7 +46,6 @@ const typeDefs = gql`
     number: Int!
     city: String!
     postalCode: Int!
-    persons: [ID]
   }
 `;
 
