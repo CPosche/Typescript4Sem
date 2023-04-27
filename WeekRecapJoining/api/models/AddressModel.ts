@@ -34,11 +34,14 @@ const addressSchema = new mongoose.Schema({
   },
 });
 
-addressSchema.pre("find", async function () {
-  await this.populate("persons");
-});
+// addressSchema.pre("find", function () {
+//   // only populate the persons field if the query is not a populate query
+//   if (!this._mongooseOptions.populate) {
+//     this.populate("persons");
+//   }
+// });
 
-addressSchema.pre("save", async function (next) {
+addressSchema.pre("save", async function () {
   if (this.isNew || this.isModified("persons")) {
     // If this is a new address or the persons field has been modified
     // then update the corresponding persons' address field
@@ -48,11 +51,7 @@ addressSchema.pre("save", async function (next) {
         { _id: { $in: personsToUpdate } },
         { $set: { address: this._id } }
       );
-    } else {
-      next();
     }
-  } else {
-    next();
   }
   await this.populate("persons");
 });
